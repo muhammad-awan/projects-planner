@@ -4,7 +4,7 @@ const projectsRouter = require('./routes/projects')
 const server = express()
 
 server.use(bodyParser.json())
-server.use(projectsRouter)
+server.use('/api', projectsRouter)
 
 const port = 5000
 server.listen(port, () =>{

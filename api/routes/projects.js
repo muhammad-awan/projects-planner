@@ -3,10 +3,12 @@ const router = express.Router()
 
 const projects = [
   {
-    title: 'Pong'
+    title: 'Pong',
+    skills: ['game programming', 'design']
   },
   {
-    title: 'Node.js Project'
+    title: 'Node.js Project',  
+    skills: ['Node', 'React', 'Express']
   }
 ]
 
