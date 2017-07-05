@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import ProjectList from './components/ProjectList'
 
 class App extends Component {
 state = {
@@ -13,7 +14,7 @@ state = {
       <div className="App">
       {
        !!projects ? (
-          projects.length
+        <ProjectList items={ projects }/>
        ) : (
           'loading projects...'
        )
@@ -23,7 +24,7 @@ state = {
   }
 
   componentDidMount() {
-    fetch('/projects')
+    fetch('/api/projects')
       .then(res => res.json())
       .then(json => {
         this.setState({
